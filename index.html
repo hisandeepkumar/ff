@@ -393,7 +393,7 @@
     .platform-logo.twitter i { color: #1DA1F2; }
     .platform-logo.telegram i { color: #0088cc; }
     
-    .platform-logo.vikas-jajim img { 
+    .platform-logo.flash-fire img { 
       width: 20px; 
       height: 20px; 
       border-radius: 4px;
@@ -633,10 +633,10 @@
       <div class="platform-logo telegram">
         <i class="fab fa-telegram"></i>
       </div>
-      <div class="platform-logo vikas-jajim">
-        <img src="vikas_jajim_logo.png" alt="Vikas Jajim">
+      <div class="platform-logo flash-fire">
+        <img src="flash_fire_logo.png" alt="flash_fire">
       </div>
-      <div class="platform-text">/Vikas Jajim</div>
+      <div class="platform-text">/flash_fire</div>
     </div>
 
     <!-- Telegram Status -->
@@ -657,14 +657,14 @@
       </div>
 
       <div class="overlay-preview watermark-preview">
-        <h3>Vikas Jajim Logo (Top Right)</h3>
-        <img id="uiLogo" src="vikas_jajim_logo.png" alt="Logo" style="width:120px;height:60px;object-fit:contain;">
+        <h3>flash_fire Logo (Top Right)</h3>
+        <img id="uiLogo" src="flash_fire_logo.png" alt="Logo" style="width:120px;height:60px;object-fit:contain;">
         <span>Logo will be added to the top right corner</span>
       </div>
 
       <div class="overlay-preview watermark-preview">
-        <h3>Vikas Jajim Watermark (Center)</h3>
-        <img id="uiWatermark" src="vikas_jajim_watermark.png" alt="Watermark" style="width:120px;height:60px;object-fit:contain;">
+        <h3>flash_fire Watermark (Center)</h3>
+        <img id="uiWatermark" src="flash_fire_watermark.png" alt="Watermark" style="width:120px;height:60px;object-fit:contain;">
         <span>Watermark will be added to the center with low opacity</span>
       </div>
     </div>
@@ -1343,7 +1343,7 @@
         const baseSize = Math.min(canvas.width, canvas.height);
         return {
           platform: baseSize * 0.12, // Platform logo size
-          brand: baseSize * 0.12,    // Vikas Jajim logo size
+          brand: baseSize * 0.12,    // flash_fire logo size
           margin: baseSize * 0.02,   // Margin from edges
           bottomLogo: baseSize * 0.04 // Bottom platform logos size
         };
@@ -1410,7 +1410,7 @@
         ctx.shadowBlur = 0;
       }
 
-      // NEW: Draw bottom platform logos with /Vikas Jajim text only once at the end
+      // NEW: Draw bottom platform logos with /flash_fire text only once at the end
       function drawBottomPlatformLogos(ctx, canvas) {
         const logoSize = getLogoSize(canvas);
         const bottomLogoSize = logoSize.bottomLogo;
@@ -1441,7 +1441,7 @@
           startX += bottomLogoSize + margin;
         });
         
-        // Draw Vikas Jajim logo
+        // Draw flash_fire logo
         if (uiLogoImg && uiLogoImg.src) {
           const logoImg = new Image();
           logoImg.onload = function() {
@@ -1458,10 +1458,10 @@
           logoImg.src = uiLogoImg.src;
         }
         
-        // Draw /Vikas Jajim text only once at the end - WHITE COLOR
+        // Draw /flash_fire text only once at the end - WHITE COLOR
         ctx.fillStyle = '#ffffff'; // White color for the text
         ctx.font = `400 ${bottomLogoSize}px 'Inter', sans-serif`; // Same size as logo
-        ctx.fillText('/Vikas Jajim', startX, startY);
+        ctx.fillText('/flash_fire', startX, startY);
       }
 
       function updatePreview() {
@@ -1663,7 +1663,7 @@
           
           applyTextGlow(ctx, iconChar, logoSize.margin, logoSize.margin, logoSize.platform, platform.logo.color);
 
-          // Draw Vikas Jajim logo (top right) - CONSISTENT SIZE
+          // Draw flash_fire logo (top right) - CONSISTENT SIZE
           if (uiLogoImg && uiLogoImg.src) {
             const logoImg = new Image();
             logoImg.onload = function() {
@@ -1695,7 +1695,7 @@
             watermarkImg.src = uiWatermarkImg.src;
           }
 
-          // NEW: Draw bottom platform logos with /Vikas Jajim text only once at the end
+          // NEW: Draw bottom platform logos with /flash_fire text only once at the end
           drawBottomPlatformLogos(ctx, canvas);
 
           // Set preview image
@@ -1869,7 +1869,7 @@
         }, 5000);
       }
 
-      // NEW: Draw bottom platform logos for final post with /Vikas Jajim text only once at the end
+      // NEW: Draw bottom platform logos for final post with /flash_fire text only once at the end
       function drawBottomPlatformLogosFinal(ctx, canvas) {
         const logoSize = getLogoSize(canvas);
         const bottomLogoSize = logoSize.bottomLogo;
@@ -1900,7 +1900,7 @@
           startX += bottomLogoSize + margin;
         });
         
-        // Draw Vikas Jajim logo
+        // Draw flash_fire logo
         if (uiLogoImg && uiLogoImg.src) {
           const logoImg = new Image();
           logoImg.onload = function() {
@@ -1917,10 +1917,10 @@
           logoImg.src = uiLogoImg.src;
         }
         
-        // Draw /Vikas Jajim text only once at the end - WHITE COLOR
+        // Draw /flash_fire text only once at the end - WHITE COLOR
         ctx.fillStyle = '#ffffff'; // White color for the text
         ctx.font = `400 ${bottomLogoSize}px 'Inter', sans-serif`; // Same size as logo
-        ctx.fillText('/Vikas Jajim', startX, startY);
+        ctx.fillText('/flash_fire', startX, startY);
       }
 
       async function generateAndDownloadPost() {
@@ -2128,7 +2128,7 @@
           
           applyTextGlow(ctx, iconChar, logoSize.margin, logoSize.margin, logoSize.platform, platform.logo.color);
 
-          // Load and draw Vikas Jajim logo (top right) - CONSISTENT SIZE
+          // Load and draw flash_fire logo (top right) - CONSISTENT SIZE
           let logoImg = null;
           const logoSrc = uiLogoImg && uiLogoImg.src ? uiLogoImg.src : null;
           
@@ -2176,7 +2176,7 @@
             ctx.globalAlpha = 1.0;
           }
 
-          // NEW: Draw bottom platform logos with /Vikas Jajim text only once at the end
+          // NEW: Draw bottom platform logos with /flash_fire text only once at the end
           drawBottomPlatformLogosFinal(ctx, canvas);
 
           updateProgress(90);
